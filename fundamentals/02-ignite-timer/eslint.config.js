@@ -24,5 +24,13 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
     },
+    overrides: [
+      {
+        files: ['src/@types/styled.d.ts'], // Target specific file
+        rules: {
+          '@typescript-eslint/no-empty-interface': 'off', // Disable the rule for this file
+        },
+      },
+    ],
   },
 )
